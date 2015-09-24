@@ -1,0 +1,81 @@
+azul = #012E57
+rojo = #C71E47
+negro = #010101
+fb = #4A72B0
+tw = #32B7E4
+ig = #D2C0A8
+body
+	font-family 'Lato', sans-serif
+	background-color #f7f7f7
+	padding-top 66px
+	color negro
+	.navbar-default
+		background-color azul
+		border-color azul
+		.navbar-header
+			.navbar-toggle
+				border none
+				&:hover
+				&:focus
+				&:active
+					background-color rgba(white, .1)
+					border none
+				.icon-bar
+					background-color transparent
+					border 3px solid rojo
+					height 8px
+					width 38px
+					border-radius 3px
+			.navbar-brand
+				background transparent url(./images/promometros-isotipo.png) no-repeat 15px 15px
+				height 60px
+				span
+					visibility hidden
+	.site-footer
+		background-color azul
+		color white
+		.first-block
+			background-color white
+			color azul
+			padding-top 40px
+			.logo
+				margin-bottom 5px
+			ul
+				padding 20px 0
+				list-style none
+				li
+					margin-top 2px
+					span
+						color rojo
+						vertical-align middle
+						margin-right 5px
+						font-size 1.2em
+					a
+						color negro
+		hr
+			border-top 1px solid rojo
+		.second-block
+			padding 30px 0
+			text-align center
+			.logo-footer
+				width 120px
+				height auto
+			ul
+				padding 30px 0 0
+				li
+					display inline-block
+					margin-left 20px
+					background-color fb
+					width 50px
+					height 50px
+					border-radius 50%
+					&:first-of-type
+						margin-left 0
+					&.tw
+						background-color tw
+					&.ig
+						background-color ig
+					a
+						color white
+						font-size 2em
+						line-height 2em
