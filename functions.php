@@ -12,7 +12,7 @@ register_nav_menus( array(
 	'main_menu' => 'Menu principal',
 ) );
 
-add_theme_support( 'post-thumbnails', array( 'page') );
+add_theme_support( 'post-thumbnails', array( 'page', 'desarrollo') );
 
 add_action( 'init', 'create_desarrollo_post_type' );
 
