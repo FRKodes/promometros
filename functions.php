@@ -14,25 +14,25 @@ register_nav_menus( array(
 
 add_theme_support( 'post-thumbnails', array( 'page') );
 
-// add_action( 'init', 'create_sucursal_post_type' );
+add_action( 'init', 'create_desarrollo_post_type' );
 
-// function create_sucursal_post_type() {
-// 	register_post_type( 'sucursal',
-// 		array(
-// 			'labels' => array(
-// 				'name' => __( 'Sucursales' ),
-// 				'singular_name' => __( 'Sucursal' )
-// 			),
-// 			'public' => true,
-// 			'has_archive' => false,
-// 			'supports' => array(
-// 					'title',
-// 					'revisions',
-// 					'thumbnail',
-// 					)
-// 		)
-// 	);
-// }
+function create_desarrollo_post_type() {
+	register_post_type( 'desarrollo',
+		array(
+			'labels' => array(
+				'name' => __( 'Desarrollos' ),
+				'singular_name' => __( 'Desarrollo' )
+			),
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array(
+					'title',
+					'revisions',
+					'thumbnail',
+					)
+		)
+	);
+}
 
 // add_action( 'init', 'create_sucursal_taxonomies', 0 );
 

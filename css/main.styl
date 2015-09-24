@@ -4,6 +4,17 @@ negro = #010101
 fb = #4A72B0
 tw = #32B7E4
 ig = #D2C0A8
+
+.rojo
+	color rojo
+.italic
+	font-style italic
+h1
+	color rojo
+	font-style italic
+	text-align center
+	font-size 2.4em
+	margin-bottom 20px
 body
 	font-family 'Lato', sans-serif
 	background-color #f7f7f7
@@ -31,6 +42,215 @@ body
 				height 60px
 				span
 					visibility hidden
+		.navbar-collapse
+			border-color transparent
+			.navbar-nav
+				ul
+					padding 0
+					list-style none
+					text-align center
+					li
+						margin-top 10px
+						a
+							color white
+	/*
+	Home styles
+	*/
+	.main-banner
+		height 410px
+		display block
+		position relative
+		.item
+			width 100%
+			background transparent url(./images/banner_home.jpg) no-repeat center center
+			background-size cover
+			height 410px
+			display inline-block
+			&.two
+				background transparent url(./images/banner_desarrollo.jpg) no-repeat center center
+				background-size cover
+			&.three
+				background transparent url(./images/banner_contacto.jpg) no-repeat center center
+				background-size cover
+			&.four
+				background transparent url(./images/banner_actividades.jpg) no-repeat center center
+				background-size cover
+			p
+				position absolute
+				bottom 70px
+				padding 0 40px
+				color white
+				font-size 1.2em
+				span
+					color rojo
+					font-size 1.5em
+					font-weight bold
+		.slick-prev
+		.slick-next
+			display none !important
+		.slick-dots
+			text-align center
+			position absolute
+			width 100%
+			bottom 10px
+			li
+				display inline-block
+				margin-left 10px
+				&.slick-active
+					button
+						background-color white
+				button
+					border-radius 50%
+					height 16px
+					width 16px
+					background-color rgba(white, .6)
+					border none
+					color transparent
+				&:first-of-type
+					margin-left 0
+	.block-section
+		background-color white
+		margin 35px 0
+		overflow hidden
+		.info
+				width 66%
+				display inline-block
+				vertical-align middle
+			figure
+				width 90px
+				background-color black
+				height 90px
+				display inline-block
+				img
+					width 100%
+					height auto
+			.title
+				width 100%
+				padding 10px
+				color rojo
+				font-size 1.4em
+				display inline-block
+				vertical-align middle
+			.description
+				width 100%
+				display none
+				padding-left 10px
+	/*quienes somos*/
+	.banner-top
+		background transparent url(./images/banner_somos.jpg) no-repeat center top
+		background-size cover
+		height 300px
+	.main-content
+		padding-bottom 50px
+	/*Actividades de desarrollo*/
+	.activities
+		background transparent url(./images/banner_actividades.jpg) no-repeat center top
+	.panel-group
+		margin-top 60px
+		.panel
+			border-radius 0
+		.panel-default
+			border-radius 0
+			border none
+			border-top 1px solid rojo
+			background-color transparent
+			.panel-collapse
+				border none
+			.panel-heading
+				padding-left 0
+				.panel-title
+					text-transform uppercase
+					font-weight bold
+					color rojo
+					font-size 1em
+					span
+						font-size .7em
+						color rojo
+						margin-right 5px
+						display inline-block
+						transform rotate(90deg)
+						&.active
+							transform rotate(-90deg)
+		.panel-default>.panel-heading+.panel-collapse>.panel-body
+			border-top none
+			padding-left 0
+			padding-right 0
+	/*contacto*/
+	.contact
+		background transparent url(./images/banner_contacto.jpg) no-repeat center top
+	.map
+		width 100%
+		height auto
+		overflow hidden
+		img
+			width 100%
+			height auto
+	.contact-info
+		padding-top 20px
+		ul
+			padding 0
+			margin-top 20px
+			list-style none
+			li
+				span
+					color rojo
+					margin-right 5px
+				a
+					color negro
+	.contactForm
+		margin-top 30px
+		position relative
+		.form-control
+			border none
+			border-radius 0
+		.form-group.error
+			input
+			textarea
+				border 1px solid rojo
+		textarea
+			resize none
+			height 80px
+		.btn.btn-primary
+			border rojo
+			background-color rojo
+			border-radius 0
+			float right
+			padding-left 40px
+			padding-right 40px
+		.sent_mail_alert
+			background-color rgba(azul,.9)
+			color white
+			text-align center
+			padding 40px 20px
+			position absolute
+			display none
+			top 100px
+			width 100%
+	
+	/*Nuestros desarrollos*/
+	.developments
+		background transparent url(./images/banner_desarrollo.jpg) no-repeat center bottom
+	.dev-container
+		.item
+			background-color white
+			margin-bottom 40px
+			&:last-of-type
+				margin-bottom 0
+			figure
+				width 100%
+				height auto
+				overflow hidden
+				img
+					width 100%
+					height auto
+					display block
+			.info
+				padding 10px
+				.title
+					color rojo
+					font-size 1.3em
+					font-style italic
+	/*Footer*/
 	.site-footer
 		background-color azul
 		color white
@@ -79,3 +299,168 @@ body
 						color white
 						font-size 2em
 						line-height 2em
+@media screen and (min-width:480px)
+	body
+		/*
+		Home styles 480px
+		*/
+		.main-banner
+			height 430px
+			.slick-dots
+				bottom 20px
+		.block-section
+			figure
+				width 135px
+				height 135px
+			.info
+				width 66%
+				display inline-block
+				vertical-align middle
+				.title
+					width 100%
+					padding 10px
+					color rojo
+					font-size 1.4em
+					display inline-block
+					vertical-align top
+				.description
+					display inline-block
+		/*quienes somos 480px*/
+		.banner-top
+			height 430px
+		/*Nuestros desarrollos*/
+		.dev-container
+			.item
+				figure
+					height 300px
+				.info
+					padding 10px
+					div
+						margin-bottom 10px
+@media screen and (min-width:768px)
+	h1
+		text-align left
+	body
+		padding-top 0
+		.navbar-default
+			background-color rgba(black, 0.1)
+			border-color transparent
+			.navbar-header
+				.navbar-brand
+					background transparent url(./images/promometros-logo-completo.png) no-repeat left top
+					width 190px
+					height 100px
+					margin-top 10px
+			.navbar-collapse
+				border-color transparent
+				.navbar-nav
+					ul
+						padding 0
+						text-align right
+						padding-top 40px
+						li
+							margin-top 10px
+							display inline-block
+							margin-left 20px
+							&.page-item-13
+								display none
+							a
+								padding 20px 0
+		/*Home styles 480px */
+		.main-banner
+			height 666px
+			.item
+				background transparent url(./images/banner_home.jpg) no-repeat center bottom
+				background-size cover
+				height 666px
+				p
+					bottom 100px
+					padding 0 100px
+					font-size 1.5em
+					span
+						font-size 1.8em
+		.block-section
+			display inline-block
+			width 30%
+			margin-right 4%
+			vertical-align top
+			&:last-of-type
+				margin-right 0
+			figure
+				height auto
+				overflow hidden
+				width 100%
+			.info
+				width 100%
+				height 180px
+				.title
+					height 80px
+		/*quienes somos 768px*/
+		.banner-top
+			height 430px
+		/*contacto 768px*/
+		.contactForm
+			margin-top 30px
+			position relative
+			.form-control
+				border none
+				border-radius 0
+			.form-group.error
+				input
+				textarea
+					border 1px solid rojo
+			textarea
+				resize none
+				height 80px
+			.btn.btn-primary
+				border rojo
+				background-color rojo
+				border-radius 0
+				float right
+				padding-left 40px
+				padding-right 40px
+			.sent_mail_alert
+				background-color rgba(azul,.9)
+				color white
+				text-align center
+				padding 40px 20px
+				position absolute
+				display none
+				top 100px
+				width 100%
+			.btn.btn-primary
+				padding-right 50px
+				padding-left 50px
+@media screen and (min-width:1000px)
+	body
+		.dev-container
+			height 500px
+			overflow hidden
+			padding-left 20px
+			position relative
+			.item
+				display inline-block
+				margin-right 20px
+			.slick-prev
+			.slick-next
+				position absolute
+				bottom 10px
+				width 40px
+				text-align center
+				height 40px
+				border-radius 50%
+				background-color white
+				border none
+				font-size 1em
+				line-height 1em
+				color rojo
+				&:focus
+				&:active
+				&:hover
+					outline 0
+					
+			.slick-prev
+				left 45%
+				transform rotate(180deg)
+			.slick-next
+				right 45%
