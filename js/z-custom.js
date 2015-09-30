@@ -10,6 +10,7 @@ $( document ).ready(function() {
     $('ul.sub-menu').addClass('dropdown-menu').removeClass('sub-menu');
 
     $('.panel-title').on('click', function (){
+        $('span.icon-g').removeClass('active');
         $(this).find('span').toggleClass('active');
 
     });
