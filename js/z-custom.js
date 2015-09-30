@@ -21,6 +21,12 @@ $( document ).ready(function() {
         dots : true
     });
 
+    $('.detail-carousel').slick({
+        infinite: true,
+        autoplay: true,
+        dots : true
+    });
+
     var w = window.innerWidth;
     console.log(w);
     if (w >= 1000) { 

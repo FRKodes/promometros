@@ -32,6 +32,7 @@ function create_desarrollo_post_type() {
 					)
 		)
 	);
+	flush_rewrite_rules();
 }
 
 // add_action( 'init', 'create_sucursal_taxonomies', 0 );

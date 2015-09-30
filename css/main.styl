@@ -144,6 +144,7 @@ body
 		padding-bottom 50px
 	/*Actividades de desarrollo*/
 	.activities
+	.development-detail
 		background transparent url(./images/banner_actividades.jpg) no-repeat center top
 	.panel-group
 		margin-top 60px
@@ -250,6 +251,111 @@ body
 					color rojo
 					font-size 1.3em
 					font-style italic
+					a
+						color rojo
+	
+	/*Dev details 320px*/
+	h1.detail
+		text-align left
+	.detail-carousel
+		width 100%
+		height auto
+		overflow hidden
+		position relative
+		margin-bottom 0
+		padding-bottom 0
+		.item
+			width 100%
+			height auto
+			display inline-block
+			overflow hidden
+			img
+				height auto
+				width 100%
+		.slick-prev
+		.slick-next
+			background-color white
+			border none
+			border-radius 50%
+			top 0
+			color rojo
+			display none !important
+			font-size 1em
+			height 34px
+			line-height 1em
+			position absolute
+			text-align center
+			width 34px
+		.slick-next
+			right 0
+		.slick-prev
+			left 0
+			filter FlipH
+			transform scaleX(-1)
+			-ms-filter "FlipH"
+			-o-transform scaleX(-1)
+			-moz-transform scaleX(-1)
+			-webkit-transform scaleX(-1)
+		.slick-dots
+			text-align center
+			padding 0
+			position relative
+			bottom 40px
+			li
+				display inline-block
+				margin-left 15px
+				border none
+				background-color rgba(white, 0.6)
+				width 16px
+				height 16px
+				border-radius 50%
+				&:first-of-type
+					margin-left 0
+				&.slick-active
+					background-color white
+				button
+					background-color transparent
+					border none
+					color transparent
+	.detail_info
+		background-color white
+		padding 20px 10px
+		margin-top -36px
+		.mts
+		.activities
+		.ivestor
+		.anchor
+			padding-bottom 10px
+		.activities
+			background none
+	.pre-next-dev
+		text-align center
+		padding-top 50px
+		.prev
+		.next
+			display inline-block
+			span
+				color rojo
+				background-color white
+				border-radius 50%
+				width 24px
+				text-align center
+				height 24px
+				margin 0 5px
+				font-size 1.1em
+				line-height 1.1em
+				display inline-block
+				&:before
+					vertical-align middle
+			a
+				color negro
+				text-decoration underline
+		.prev span.icon-g
+			transform scaleX(-1)
+			-ms-filter "FlipH"
+			-o-transform scaleX(-1)
+			-moz-transform scaleX(-1)
+			-webkit-transform scaleX(-1)
 	/*Footer*/
 	.site-footer
 		background-color azul
@@ -362,10 +468,30 @@ body
 							margin-top 10px
 							display inline-block
 							margin-left 20px
+							opacity 0.5
+							vertical-align top
+							&.current_page_item
+								opacity 1
+								&:after
+									content '_____'
+									display block
+									color white
+									text-align center
+									margin-top -12px
+							&:hover
+								opacity 1
+								transition opacity 0.5s ease
+								&:after
+									content '_____'
+									display block
+									color white
+									text-align center
+									margin-top -12px
 							&.page-item-13
 								display none
 							a
 								padding 20px 0
+								text-decoration none
 		/*Home styles 480px */
 		.main-banner
 			height 666px
@@ -398,6 +524,15 @@ body
 		/*quienes somos 768px*/
 		.banner-top
 			height 430px
+		
+		/*Detail dev 768px*/
+		.pre-next-dev
+			.prev
+			.next
+				a
+					font-size 1.2em
+			.next
+				margin-left 40px
 		/*contacto 768px*/
 		.contactForm
 			margin-top 30px
@@ -433,6 +568,13 @@ body
 				padding-left 50px
 @media screen and (min-width:1000px)
 	body
+		.navbar-default
+			.navbar-collapse
+				.navbar-nav
+					ul
+						li
+							margin-left 50px
+							font-size 1.2em
 		.dev-container
 			height 500px
 			overflow hidden
@@ -464,3 +606,48 @@ body
 				transform rotate(180deg)
 			.slick-next
 				right 45%
+		/*Dev details 1000px*/
+		h1.detail
+			text-align left
+		.carousel-info-container
+			background-color white
+			.detail-carousel
+				height auto
+				overflow hidden
+				padding 0
+				margin 0
+				width 60%
+				display inline-block
+				vertical-align top
+				.item
+					margin 0
+					padding 0
+				.slick-dots
+					position absolute
+					bottom 20px
+					width 100%
+			.detail_info
+				background-color white
+				margin 0
+				width 38%
+				vertical-align top
+				display inline-block
+				.mts
+				.activities
+				.ivestor
+				.anchor
+					padding-bottom 20px
+		.pre-next-dev
+			.prev
+			.next
+				a
+					font-size 1.4em
+@media screen and (min-width:1200px)
+	body
+		.navbar-default
+			.navbar-collapse
+				.navbar-nav
+					ul
+						text-align right
+						li
+							margin-left 90px

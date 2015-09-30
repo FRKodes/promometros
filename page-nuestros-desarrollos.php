@@ -23,46 +23,22 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					<div class="dev-container">
+					<div class="dev-container"><?php
 						
-						<div class="item">
-							<figure><img src="<?php echo img_path($_SERVER['HTTP_HOST']) ?>black.jpg" alt=""></figure>
-							<div class="info">
-								<div class="title">Nombre Desarrollo</div>
-								<div class="location">Guadalajara, Jalisco.</div>
-								<div class="mts">Área rentable 36,000 mts2.</div>
-							</div>
-						</div>
+						$my_query = new WP_Query('post_type=desarrollo');
+						while ($my_query->have_posts()) : $my_query->the_post();?>
+							<div class="item">
+								<figure><a href="<?php the_permalink() ?>" title="Ver el desarrollo <?php the_title() ?>"><?php the_post_thumbnail() ?></a></figure>
+								<div class="info">
+									<div class="title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
+									<div class="location"><?php the_field('location') ?></div>
+									<div class="mts"><?php the_field('area_rentable') ?></div>
+								</div>
+							</div><?php 
+						endwhile;  wp_reset_query(); ?>
 
-						<div class="item">
-							<figure><img src="<?php echo img_path($_SERVER['HTTP_HOST']) ?>black.jpg" alt=""></figure>
-							<div class="info">
-								<div class="title">Nombre Desarrollo</div>
-								<div class="location">Guadalajara, Jalisco.</div>
-								<div class="mts">Área rentable 36,000 mts2.</div>
-							</div>
-						</div>
+					</div>
 
-						<div class="item">
-							<figure><img src="<?php echo img_path($_SERVER['HTTP_HOST']) ?>black.jpg" alt=""></figure>
-							<div class="info">
-								<div class="title">Nombre Desarrollo</div>
-								<div class="location">Guadalajara, Jalisco.</div>
-								<div class="mts">Área rentable 36,000 mts2.</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<figure><img src="<?php echo img_path($_SERVER['HTTP_HOST']) ?>black.jpg" alt=""></figure>
-							<div class="info">
-								<div class="title">Nombre Desarrollo</div>
-								<div class="location">Guadalajara, Jalisco.</div>
-								<div class="mts">Área rentable 36,000 mts2.</div>
-							</div>
-						</div>
-				</div>
-
-					
 				</div>
 			</div>
 		</main><!-- .site-main -->
