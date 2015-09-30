@@ -131,6 +131,8 @@ body
 				font-size 1.4em
 				display inline-block
 				vertical-align middle
+				a
+					rojo
 			.description
 				width 100%
 				display none
@@ -449,8 +451,12 @@ body
 	body
 		padding-top 0
 		.navbar-default
-			background-color rgba(black, 0.1)
 			border-color transparent
+			background-color transparent
+			transition all .6s ease
+			&.solid
+				background-color azul
+				transition all .6s ease
 			.navbar-header
 				.navbar-brand
 					background transparent url(./images/promometros-logo-completo.png) no-repeat left top
