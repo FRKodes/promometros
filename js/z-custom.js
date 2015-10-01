@@ -9,10 +9,11 @@ $( document ).ready(function() {
 
     $('ul.sub-menu').addClass('dropdown-menu').removeClass('sub-menu');
 
-    $('.panel-title').on('click', function (){
-        $('span.icon-g').removeClass('active');
-        $(this).find('span').toggleClass('active');
-
+    $('.panel-title a').on('click', function (){
+        $('span.icon-g').addClass('others');
+        $(this).prev().removeClass('others');
+        $(this).prev().toggleClass('active');
+        $('span.icon-g.others').removeClass('active');
     });
 
     $(window).scroll(function() {
