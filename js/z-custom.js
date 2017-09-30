@@ -16,8 +16,9 @@ $( document ).ready(function() {
         $('span.icon-g.others').removeClass('active');
     });
 
-    $(window).scroll(function() {
-        if ($('body').scrollTop() > 350) {
+    $( window ).scroll(function() {
+        var vertical_position = $('html').scrollTop();
+        if (vertical_position >=1) {
             $('.navbar-default').addClass('solid');
         }else{
             $('.navbar-default').removeClass('solid');

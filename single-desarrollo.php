@@ -31,10 +31,11 @@ get_header(); ?>
 							</div>
 
 							<div class="detail_info">
-								<div class="mts"><b>Área rentable:</b> <br><?php the_field('area_rentable') ?></div>
-								<div class="activities"><b>Actividades desarrolladas:</b> <br><?php the_field('actividades') ?> </div>
-								<div class="ivestor"><b>Inversionista:</b> <br><?php the_field('inversionista') ?> </div>
-								<div class="anchor"><b>Anclas:</b> <br><?php the_field('anclas') ?> </div>
+								<?php if (get_field('direccion')) { ?><div class="mts"><b>Dirección:</b> <br><?php the_field('direccion') ?></div><?php } ?>
+								<?php if (get_field('area_rentable')) { ?><div class="mts"><b>Área rentable:</b> <br><?php the_field('area_rentable') ?></div><?php } ?>
+								<?php if (get_field('actividades')) { ?><div class="activities"><b>Actividades desarrolladas:</b> <br><?php the_field('actividades') ?> </div><?php } ?>
+								<?php if (get_field('inversionista')) { ?><div class="ivestor"><b>Inversionista:</b> <br><?php the_field('inversionista') ?> </div><?php } ?>
+								<?php if (get_field('anclas')) { ?><div class="anchor"><b>Anclas:</b> <br><?php the_field('anclas') ?> </div><?php } ?>
 							</div>
 						</div>
 
@@ -48,12 +49,9 @@ get_header(); ?>
 								<?php next_post_link('%link'); ?>
 							</div> 
 						</div>
-
 					<?php endwhile; ?>
-
 				</div>
 			</div>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
-
 <?php get_footer(); ?>

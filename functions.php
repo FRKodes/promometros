@@ -69,7 +69,7 @@ function create_desarrollo_post_type() {
 function img_path($host){
 	$extra = "/wp-content/themes/promometros/images/";
 	if ($host != 'promometros.dev') {
-		$extra = "/promomts/wp-content/themes/promometros/images/";
+		$extra = "/wp-content/themes/promometros/images/";
 	}
 	return $extra;
 }

@@ -19,7 +19,6 @@
 					<div class="logo">
 						<img class="back-image" src="<?php echo img_path($_SERVER['HTTP_HOST']) ?>promometros-logotipo-d.png" alt="promometros logotipo">
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<hr>
 					<p>Av. Pablo Neruda 3463 col. Colinas de San Javier <br> Guadalajara, Jal. México. C.P. 45110</p>
 					<ul>
